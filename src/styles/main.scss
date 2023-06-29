@@ -10,12 +10,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .image-top {
   width: 100vw;
+  height: 20vh;
 }
 
 .image-bottom {
   width: 100vw;
+  height: 20vh;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -27,7 +33,7 @@
   justify-content: space-between;
 
   &__content {
-    max-width: 494px;
+    max-width: 520px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -39,15 +45,28 @@
       text-transform: uppercase;
       color: variables.$purple;
       letter-spacing: 3px;
+
+      @media (max-width: 600px) {
+        font-size: 32px;
+      }
+      @media (max-width: 532px) {
+        font-size: 24px;
+      }
     }
 
     &__time {
       display: flex;
-      justify-content: space-between;
       padding: 20px 0;
+      justify-content: space-between;
+
       p {
+        text-align: center;
         font-size: 14px;
         color: variables.$light-grey;
+        padding-left: 32px;
+      }
+
+      @media (max-width: 532px) {
       }
     }
 
@@ -56,6 +75,14 @@
       p {
         font-size: 72px;
         color: variables.$black;
+        white-space: nowrap;
+
+        @media (max-width: 600px) {
+          font-size: 64px;
+        }
+        @media (max-width: 532px) {
+          font-size: 48px;
+        }
       }
     }
 
@@ -77,5 +104,15 @@
         color: #fff;
       }
     }
+  }
+  &__branding {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    padding-top: 6vh;
   }
 }
