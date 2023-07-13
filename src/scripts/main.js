@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const countdownFunction = setInterval(() => {
 
     // Defini a data final
-    const targetDate = new Date("2023-07-08").getTime();
+    const targetDate = new Date("2023-09-15").getTime();
 
     // Defini a data atual
     const currentDate = new Date().getTime();
